@@ -8,13 +8,13 @@
 
 Для того чтобы работать со ссылками нам понадобится компонент [**Link** ](https://reactrouter.com/start/library/navigating#link)из **react-router**
 
-```
+```typescript
 <Link to={'/product'}>Show more</Link>
 ```
 
 Для того чтобы ссылка выглядела как кнопка, добавим ей соответствующие стили
 
-```
+```css
 .card a {
   background-color: white;
   border: 1px solid #2068F8;
@@ -45,7 +45,7 @@
 
 3\) ⚡Для того чтобы получить ответ на предыдущий вопрос нужно ознакомиться с еще одним хуком из библиотеки react-router-dom. Встречайте [**useParams**](https://reactrouter.com/start/library/url-values#route-params)
 
-```
+```typescript
 function App() {
   return (
     <div className="appContainer">
@@ -59,7 +59,7 @@ function App() {
 }
 ```
 
-```
+```typescript
 export const Product = () => {
   const [product, setProduct] = useState<ProductType | null>(null);
 
@@ -81,7 +81,7 @@ export const Product = () => {
 
 4\) ⚡Все, что осталось сделать это использовать этот **uri параметр в url**. Идем в компонент **Bestellers.jsx** и изменяем адрес ссылки
 
-```
+```typescript
 export const BestSellers = () => {
   /*...*/
   return (
@@ -112,7 +112,7 @@ export const BestSellers = () => {
 
 Но для начал отрисуем разметку и поправим стили
 
-```
+```typescript
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
